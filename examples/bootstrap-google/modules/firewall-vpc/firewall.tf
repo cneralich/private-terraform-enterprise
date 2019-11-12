@@ -15,9 +15,9 @@ resource "google_compute_firewall" "ptfe" {
 resource "google_compute_firewall" "lb-healthchecks" {
   name          = "lb-healthcheck-firewall"
   network       = "${google_compute_network.ptfe_vpc.name}"
-  source_ranges = "${var.healthchk_ips}"
+  source_ranges = ["${var.healthchk_ips}", "${google_compute_subnetwork.ptfe_subnet.ip_cidr_range}"]
 
   allow {
     protocol = "tcp"
   }
-} 
+}

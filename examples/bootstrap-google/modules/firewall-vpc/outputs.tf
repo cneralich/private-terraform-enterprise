@@ -13,3 +13,7 @@ output "ptfe_firewall" {
 output "ptfe_healthchk_firewall" {
   value = "${google_compute_firewall.lb-healthchecks.name}"
 }
+
+output "google_compute_network_url" {
+  value = "${google_compute_network.ptfe_vpc.self_link}"
+}

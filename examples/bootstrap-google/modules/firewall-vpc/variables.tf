@@ -12,3 +12,9 @@ variable "subnet_range" {
   type        = "string"
   description = "CIDR range for subnet"
 }
+
+variable "name" {
+  type        = "string"
+  description = "Name to attach to your VPC"
+  default     = "ptfe"
+}

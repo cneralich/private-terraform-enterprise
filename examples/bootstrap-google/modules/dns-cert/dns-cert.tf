@@ -1,3 +1,17 @@
+/*resource "google_dns_managed_zone" "dnszone" {
+  name        = "${var.dnszone}"
+  dns_name    = "${var.domain}."
+  description = "Terraform Enterprise private DNS zone"
+
+  /*visibility = "private"
+
+  private_visibility_config {
+    networks {
+      network_url = "${var.network_url}"
+    }
+  }
+}*/
+
 data "google_dns_managed_zone" "dnszone" {
   name     = "${var.dnszone}"
 }
@@ -31,7 +45,7 @@ resource "google_compute_managed_ssl_certificate" "frontendcert" {
 }
 
 resource "google_compute_ssl_policy" "ptfe-ssl-policy" {
-  name    = "ptfe-ssl-policy"
-  profile = "RESTRICTED"
+  name            = "ptfe-ssl-policy"
+  profile         = "RESTRICTED"
   min_tls_version = "TLS_1_2"
 }

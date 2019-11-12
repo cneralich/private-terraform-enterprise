@@ -53,3 +53,26 @@ variable "subnet_range" {
   description = "CIDR range for subnet"
   default     = "10.1.0.0/16"
 }
+
+variable "postgresql_dbname" {
+  type = "string"
+  description = "Name of Postgres Database"
+  default = "ptfe"
+}
+
+variable "postgresql_user" {
+  type        = "string"
+  description = "Username for Postgres Database"
+  default     = "tfepsqluser"
+}
+
+variable "postgresql_password" {
+  type        = "string"
+  description = "Password for Postgres Database"
+}
+
+variable "name" {
+  type        = "string"
+  description = "Name to pass to your resources"
+  default     = "ptfe"
+}

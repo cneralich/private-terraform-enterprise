@@ -9,3 +9,11 @@ output "cert" {
 output "dns_entry" {
   value = "${var.frontenddns}.${data.google_dns_managed_zone.dnszone.dns_name}"
 }
+
+output "ssl-policy" {
+  value = "${google_compute_ssl_policy.ptfe-ssl-policy.name}"
+}
+
+output "dns_zone" {
+  value = "${data.google_dns_managed_zone.dnszone.name}"
+}
