@@ -50,7 +50,7 @@ resource "google_sql_database_instance" "tfe-psql-db" {
   settings {
     # Second-generation instance tiers are based on the machine
     # type. See argument reference below.
-    tier = "db-n1-standard-4"
+    tier = "${var.postgresql_machinetype}"
 
     ip_configuration {
       ipv4_enabled    = false
