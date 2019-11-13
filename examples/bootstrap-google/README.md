@@ -1,6 +1,6 @@
 This Module preps your GCP Project for an installation of Terraform Enterprise. This Module will create a VPC, Subnet, GCS Bucket, Postrgres Database, Firewalls, and SSL Certificate.
 
-## Pre-req
+## Pre-requisites
 
 The following items must be configured prior to using this Module:
 
