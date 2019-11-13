@@ -1,6 +1,6 @@
 This Module preps your GCP Project for an installation of Terraform Enterprise. This Module will create a VPC, Subnet, GCS Bucket, Postgres Database, Firewalls, and SSL Certificate.
 
-## Pre-requisites
+## Pre-Requisites
 
 The following items must be configured prior to using this Module:
 
@@ -16,3 +16,7 @@ The following items must be configured prior to using this Module:
 - `domain` -- the Domain to be used
 - `dnszone` -- the pre-configured DNS Zone
 - `postgresql_password` -- password for your Postgres Database
+
+## How to Use this Repo
+- Update the values in the terraform.tfvars file 
+- Run `terraform plan` and `terraform apply`
