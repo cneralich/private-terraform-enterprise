@@ -16,7 +16,3 @@ The following items must be configured prior to using this Module:
 - `domain` -- the Domain to be used
 - `dnszone` -- the pre-configured DNS Zone
 - `postgresql_password` -- password for your Postgres Database
-
-## How to Use this Repo
-- Update the values in the terraform.tfvars file 
-- Run `terraform plan` and `terraform apply`
