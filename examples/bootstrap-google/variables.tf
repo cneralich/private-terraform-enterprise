@@ -54,6 +54,12 @@ variable "subnet_range" {
   default     = "10.1.0.0/16"
 }
 
+variable "postgresql_machinetype" {
+  type = "string"
+  description = "Machine type to use for Postgres Database"
+  default = "db-f1-micro"
+}
+
 variable "postgresql_dbname" {
   type = "string"
   description = "Name of Postgres Database"
