@@ -8,6 +8,8 @@ The following items must be configured prior to using this Module:
 - Valid GCP Credentials stored in JSON format
 - A valid DNS Zone
 - A valid Domain
+- Enable the servicenetworking.googleapis.com API in your GCP Project
+- Enable the cloudresourcemanager.googleapis.com API in your GCP Project
 
 ## Required Variables
 
