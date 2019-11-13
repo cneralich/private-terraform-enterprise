@@ -9,7 +9,7 @@ The following items must be configured prior to using this Module:
 - A valid DNS Zone
 - A valid Domain
 
-## required variables
+## Required Variables
 
 - `project` -- name of the GCP Project into which you'll install Terraform Enterprise
 - `creds` -- path to and name of the JSON Credential file to use
