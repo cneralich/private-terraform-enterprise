@@ -1,17 +1,18 @@
-This module preps your gcp project for a v5 installs. This will create a vpc, subnet and firewall, as well as generate a certificate.
+This Module preps your GCP Project for an installation of Terraform Enterprise. This Module will create a VPC, Subnet, GCS Bucket, Postrgres Database, Firewalls, and SSL Certificate.
 
 ## Pre-req
 
-The only thing required to be previously conifgured is:
+The following items must be configured prior to using this Module:
 
-- A DNS zone in gcp
-- A project
-- Valid credentials stored in json format
+- A GCP Project
+- Valid GCP Credentials stored in JSON format
+- A valid DNS Zone
+- A valid Domain
 
 ## required variables
 
-- `project` -- name of the gcp project to install into
-- `creds` -- path to and name of the json credential file to use
-- `domain` -- the domain to be used
-- `dnszone` -- the pre-configured dnszone
-
+- `project` -- name of the GCP Project into which you'll install Terraform Enterprise
+- `creds` -- path to and name of the JSON Credential file to use
+- `domain` -- the Domain to be used
+- `dnszone` -- the pre-configured DNS Zone
+- `postgresql_password` -- password for your Postgres Database
