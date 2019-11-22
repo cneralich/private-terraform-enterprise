@@ -8,10 +8,26 @@ output "subnet_tags" {
   description = "The tags associated with the subnets created"
 }
 
-output "route53" {
-  value = {
-    zone_id      = "${element(coalescelist(aws_route53_zone.new.*.zone_id, list("")),0)}"
-    name_servers = "${coalescelist(aws_route53_zone.new.*.name_servers, list(""))}"
-    domain_name  = "${var.domain_name}"
-  }
+output "all_subnet_ids" {
+  value = "${concat(module.new_vpc.public_subnets, module.new_vpc.private_subnets)}"
+}
+
+output "all_cidr_blocks" {
+  value = "${concat(module.new_vpc.public_subnets_cidr_blocks, module.new_vpc.private_subnets_cidr_blocks)}"
+}
+
+output "public_subnets" {
+  value = "${module.new_vpc.public_subnets}"
+}
+
+output "private_subnets" {
+  value = "${module.new_vpc.private_subnets}"
+}
+
+output "public_subnets_cidr_blocks" {
+  value = "${module.new_vpc.public_subnets_cidr_blocks}"
+}
+
+output "private_subnets_cidr_blocks" {
+  value = "${module.new_vpc.private_subnets_cidr_blocks}"
 }

@@ -15,6 +15,7 @@ variable "private_subnet_cidr_blocks" {
   default     = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 }
 
+
 variable "additional_tags" {
   type        = "map"
   description = "A map of additional tags to attach to all resources created."
@@ -22,14 +23,8 @@ variable "additional_tags" {
 }
 
 variable "availability_zones" {
-  type        = "list"
   description = "List of the Availability zones to use."
-  default     = ["us-east-2a", "us-east-2b", "us-east-2c"]
-}
-
-variable "domain_name" {
-  description = "The domain to create a route53 zone for. (eg. `tfe.example.com`), will not create if left empty."
-  default     = ""
+  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
 }
 
 variable "prefix" {
@@ -43,6 +38,6 @@ locals {
 
   default_tags = {
     Application = "Terraform Enterprise"
-    Environment = "Beta-Testing"
+    Environment = "Production"
   }
 }
